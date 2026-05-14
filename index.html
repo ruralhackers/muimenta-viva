@@ -72,7 +72,28 @@
             letter-spacing: -0.02em;
             line-height: 1.2;
             color: #1a1a1a;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .intro-text {
+            font-family: 'Lora', serif;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            padding: 0 1rem;
+        }
+        
+        .intro-text a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        
+        .intro-text a:hover {
+            color: #666;
         }
         
         .links-row {
@@ -127,8 +148,33 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .intro-text {
+                font-size: 1rem;
                 margin-bottom: 2rem;
             }
+            
+            .links-row {
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .intro-text {
+                font-size: 0.95rem;
+            }
+            
+            .link-card a.button {
+                font-size: 0.9rem;
+                padding: 1.5rem 0.75rem;
+            }
+        }
             
             .links-row {
                 gap: 1rem;
@@ -209,6 +255,14 @@
 <body>
     <div class="container">
         <h1>Convocatoria Muimenta Viva 2026</h1>
+        
+        <p class="intro-text">
+            Muimenta Viva é a fase cero dun proxecto de coliving aldea en Carballeda de Avia, Ourense. 
+            Buscamos unha <a href="assets/pdfs/persoa-conectora.pdf" target="_blank">persoa residente permanente</a> 
+            (xuño-decembro 2026) que coordine os espazos e eventos, e persoas creadoras para 
+            <a href="assets/pdfs/residencias.pdf" target="_blank">residencias temporais</a>. 
+            Ambas convocatorias están abertas.
+        </p>
         
         <div class="links-row">
             <div class="link-card">
