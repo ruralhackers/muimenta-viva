@@ -87,9 +87,24 @@
             max-width: 400px;
             text-align: center;
             display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
         
-        .link-card a {
+        .pdf-link {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .pdf-link:hover {
+            color: #1a1a1a;
+            text-decoration: underline;
+        }
+        
+        .link-card a.button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -105,7 +120,7 @@
             transition: background-color 0.3s ease;
         }
         
-        .link-card a:hover {
+        .link-card a.button:hover {
             background-color: #333;
         }
         
@@ -197,12 +212,18 @@
         
         <div class="links-row">
             <div class="link-card">
-                <a href="https://forms.gle/uvxspZ3MtMnY6Y8z5" target="_blank">
+                <a href="assets/pdfs/persoa-conectora.pdf" target="_blank" class="pdf-link">
+                    📄 Bases aquí
+                </a>
+                <a href="https://forms.gle/uvxspZ3MtMnY6Y8z5" target="_blank" class="button">
                     Persoa Residente Permanente
                 </a>
             </div>
             <div class="link-card">
-                <a href="https://forms.gle/46akEhDx75zfwCs66" target="_blank">
+                <a href="assets/pdfs/residencias.pdf" target="_blank" class="pdf-link">
+                    📄 Bases aquí
+                </a>
+                <a href="https://forms.gle/46akEhDx75zfwCs66" target="_blank" class="button">
                     Residente Temporal
                 </a>
             </div>
