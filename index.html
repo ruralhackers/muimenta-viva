@@ -80,7 +80,7 @@
             font-size: 1.125rem;
             line-height: 1.8;
             text-align: center;
-            color: #555;
+            color: #333;
             max-width: 800px;
             margin: 0 auto 3rem;
             padding: 0 1rem;
@@ -115,14 +115,15 @@
         .pdf-link {
             font-family: 'Inter', sans-serif;
             font-size: 0.875rem;
-            color: #666;
-            text-decoration: none;
+            color: #555;
+            text-decoration: underline;
+            text-underline-offset: 2px;
             transition: color 0.3s ease;
+            cursor: pointer;
         }
         
         .pdf-link:hover {
             color: #1a1a1a;
-            text-decoration: underline;
         }
         
         .link-card a.button {
@@ -139,10 +140,20 @@
             font-weight: 500;
             border-radius: 4px;
             transition: background-color 0.3s ease;
+            cursor: pointer;
         }
         
         .link-card a.button:hover {
             background-color: #333;
+        }
+        
+        /* Focus states para accesibilidad */
+        .link-card a.button:focus-visible,
+        .pdf-link:focus-visible,
+        .intro-text a:focus-visible,
+        .logo-item a:focus-visible {
+            outline: 2px solid #1a1a1a;
+            outline-offset: 2px;
         }
         
         @media (max-width: 768px) {
@@ -174,21 +185,9 @@
                 font-size: 0.9rem;
                 padding: 1.5rem 0.75rem;
             }
-        }
             
             .links-row {
                 gap: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            .link-card a {
-                font-size: 0.9rem;
-                padding: 1.5rem 0.75rem;
             }
         }
         
@@ -258,9 +257,8 @@
         
         <p class="intro-text">
             Muimenta Viva é a fase cero dun proxecto de coliving aldea en Carballeda de Avia, Ourense. 
-            Buscamos unha <a href="assets/pdfs/persoa-conectora.pdf" target="_blank">persoa residente permanente</a> 
-            (xuño-novembro 2026) que coordine os espazos e eventos, e persoas creadoras para 
-            <a href="assets/pdfs/residencias.pdf" target="_blank">residencias temporais</a>. 
+            Buscamos unha persoa residente permanente (xuño-novembro 2026) que coordine os espazos e eventos, 
+            e persoas creadoras para residencias temporais. 
             Ambas convocatorias están abertas. Usa os botóns de abaixo para aplicar.
         </p>
         
