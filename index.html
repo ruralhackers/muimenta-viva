@@ -235,10 +235,10 @@
         }
 
         .cta-button-disabled,
-        .cta-button-disabled:hover {
+        .cta-button-disabled:hover,
+        .cta-button-disabled:disabled {
             background-color: #999;
             cursor: not-allowed;
-            pointer-events: none;
         }
 
         /* ========== DEADLINE ========== */
@@ -526,7 +526,7 @@
 
         <!-- CTA Button -->
         <div class="cta-section">
-            <a class="cta-button cta-button-disabled" aria-disabled="true" tabindex="-1">PRESENTAR CANDIDATURA</a>
+            <button type="button" class="cta-button cta-button-disabled" disabled>PRESENTAR CANDIDATURA</button>
         </div>
 
         <!-- Deadline -->
