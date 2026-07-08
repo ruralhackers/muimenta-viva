@@ -113,6 +113,52 @@
             font-weight: 400;
         }
 
+        .photo-gallery {
+            --gallery-gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: var(--gallery-gap);
+            align-items: start;
+            max-width: 750px;
+            margin: 0 auto 4rem;
+        }
+
+        .photo-column-left,
+        .photo-column-right {
+            display: grid;
+            gap: var(--gallery-gap);
+        }
+
+        .photo-column-left img,
+        .photo-column-right img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 2px;
+            margin: 0;
+        }
+
+        .photo-column-left img:first-child {
+            margin-top: 5rem;
+        }
+
+        .photo-slot-1,
+        .photo-slot-2,
+        .photo-slot-5,
+        .photo-slot-7,
+        .photo-slot-8 {
+            aspect-ratio: 4 / 3;
+        }
+
+        .photo-slot-3,
+        .photo-slot-6 {
+            aspect-ratio: 16 / 10;
+        }
+
+        .photo-slot-4 {
+            aspect-ratio: 16 / 9;
+        }
+
         .body-text {
             max-width: 700px;
             margin: 0 auto 3rem;
@@ -230,6 +276,19 @@
                 max-width: 100%;
             }
 
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-column-left img,
+            .photo-column-right img {
+                aspect-ratio: 4 / 3;
+            }
+
+            .photo-column-left img:first-child {
+                margin-top: 0;
+            }
+
             .info-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -276,6 +335,11 @@
 
             .subtitle {
                 font-size: 0.65rem;
+            }
+
+            .photo-column-left img,
+            .photo-column-right img {
+                aspect-ratio: 4 / 3;
             }
 
             .body-text p,
@@ -334,6 +398,21 @@
             </div>
             <div class="info-item">
                 <p>Aloxamento gratuíto (luz, auga, internet).</p>
+            </div>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="photo-column-left">
+                <img class="photo-slot-1" src="assets/muimenta-coliving/3.jpg.webp"
+                    alt="Espazo interior rehabilitado de madeira">
+                <img class="photo-slot-3" src="assets/muimenta-coliving/cocina-profesional.webp"
+                    alt="Cocina profesional do coliving">
+            </div>
+            <div class="photo-column-right">
+                <img class="photo-slot-2" src="assets/muimenta-coliving/espazo-comunidade.webp"
+                    alt="Espazo común rehabilitado con pedra e madeira">
+                <img class="photo-slot-4" src="assets/muimenta-coliving/6.jpg"
+                    alt="Vista aérea da aldea de Muimenta">
             </div>
         </div>
 
